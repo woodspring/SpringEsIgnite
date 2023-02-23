@@ -13,8 +13,10 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>SpringEsIgnite</name>
 	<description>Elasticsearch Ignite project for Spring Boot</description>
+	
 	<properties>
 		<java.version>19</java.version>
+		<springIgnite.version>1.0.0</springIgnite.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -29,7 +31,16 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web-services</artifactId>
 		</dependency>
-
+<dependency>
+  <groupId>org.apache.ignite</groupId>
+  <artifactId>ignite-spring-boot-autoconfigure-ext</artifactId>
+   <version>${springIgnite.version}</version>
+</dependency>
+<dependency>
+    <groupId>org.apache.ignite</groupId>
+  <artifactId>ignite-spring-boot-thin-client-autoconfigure-ext</artifactId>
+  <version>${springIgnite.version}</version>
+</dependency>
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>

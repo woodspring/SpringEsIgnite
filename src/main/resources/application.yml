@@ -1,0 +1,25 @@
+ignite:
+    igniteInstanceName: SpringEsIgnite
+    communicationSpi:
+        localPort: 5555
+    dataStorageConfiguration:
+        defaultDataRegionConfiguration:
+            initialSize: 10485760  #10MB
+        dataRegionConfiguration:
+            - name: woodspring-dataregion
+              initialSize: 104875600 #100M
+    cacheConfiguration:
+        - name: PEOPLE
+          queryEntities:
+          - tableName: PERSONAGE
+            keyFieldName: ID
+            keyType: java.lang.Long
+            valueType: java.lang.Object
+            fields:
+                ID: java.lang.Long
+                firstname: java.lang.String
+                lastname: java.lang.String
+                phone: java.lang.Long
+                updateDate: java.util.Date
+        - name: woodspring-cache2
+       
