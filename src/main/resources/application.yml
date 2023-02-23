@@ -22,4 +22,7 @@ ignite:
                 phone: java.lang.Long
                 updateDate: java.util.Date
         - name: woodspring-cache2
-       
+ignite-client:
+    addresses: 192.168.4.33:10800   # this is mandatory property!
+    timeout: 10000
+    tcpNoDelay: false   
